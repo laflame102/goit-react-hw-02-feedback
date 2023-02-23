@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { OptionsWrapper } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ good, neutral, bad }) => {
@@ -14,4 +15,10 @@ export const FeedbackOptions = ({ good, neutral, bad }) => {
       </button>
     </OptionsWrapper>
   );
+};
+
+FeedbackOptions.propTypes = {
+  good: PropTypes.func.isRequired,
+  neutral: PropTypes.func.isRequired,
+  bad: PropTypes.func.isRequired,
 };
